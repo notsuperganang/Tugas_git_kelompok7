@@ -54,15 +54,13 @@ public class Main {
         while (true) {
             System.out.print(prompt);
             String title = scanner.nextLine().trim();
-            String temp = title;
-            title.toLowerCase();
 
             if (!title.isBlank()) {
-                if (!library.isTitleExists(title)) {
+                if (!library.isTitleExists(title) && !library.isTitleExists(title.toLowerCase())) {
                     return title;
                 } else {
                     System.out.println("-----------------------------------------------------------");
-                    System.out.println("  A book with the title " + temp + " already exists");
+                    System.out.println("  A book with the title " + title + " already exists");
                     System.out.println("-----------------------------------------------------------");
                 }
             } else {
