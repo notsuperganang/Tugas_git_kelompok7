@@ -30,7 +30,7 @@ class Library {
 
     public boolean isTitleExists(String title) {
         for (Item item : items) {
-            if (item.getTitle().equals(title)) {
+            if (item.getTitle().equalsIgnoreCase(title)) {
                 return true;
             }
         }
