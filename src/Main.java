@@ -30,8 +30,10 @@ public class Main {
                     scanner.nextLine();
                     System.out.print("Enter book author: ");
                     String author = scanner.nextLine();
+                    System.out.print("Enter book pages: ");
+                    int pages = scanner.nextInt();
 
-                    Book newBook = new Book(title, year, author);
+                    Book newBook = new Book(title, year, author, pages);
                     library.addItem(newBook);
                     break;
 
@@ -49,8 +51,10 @@ public class Main {
                     scanner.nextLine();
                     System.out.print("Enter DVD director: ");
                     String dvdDirector = scanner.nextLine();
+                    System.out.print("Enter DVD duration: ");
+                    int dvdDur = scanner.nextInt();
                 
-                    DVD newDVD = new DVD(dvdTitle, dvdYear, dvdDirector);
+                    DVD newDVD = new DVD(dvdTitle, dvdYear, dvdDirector, dvdDur);
                     library.addItem(newDVD);
                     break;
 
